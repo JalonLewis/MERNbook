@@ -6,6 +6,9 @@ import { setFriends } from "state";
 import FlexBetween from "./FlexBetween";
 import UserImage from "./UserImage";
 
+const URL =
+  process.env.API_BASE_URL || "http://localhost:3001";
+
 const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -23,7 +26,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
 
   const patchFriend = async () => {
     const response = await fetch(
-      `http://localhost:3001/users/${_id}/${friendId}`,
+      `${URL}/users/${_id}/${friendId}`,
       {
         method: "PATCH",
         headers: {

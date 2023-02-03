@@ -2,6 +2,9 @@ import { Typography, useTheme } from "@mui/material";
 import FlexBetween from "components/FlexBetween";
 import WidgetWrapper from "components/WidgetWrapper";
 
+const URL =
+  process.env.API_BASE_URL || "http://localhost:3001";
+
 const AdvertWidget = () => {
   const { palette } = useTheme();
   const dark = palette.neutral.dark;
@@ -20,7 +23,7 @@ const AdvertWidget = () => {
         width="100%"
         height="auto"
         alt="advert"
-        src="http://localhost:3001/assets/info4.jpeg"
+        src={`${URL}/assets/info4.jpeg`}
         style={{ borderRadius: "0.75rem", margin: "0.75rem 0" }}
       />
       <FlexBetween>

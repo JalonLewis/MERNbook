@@ -1,5 +1,8 @@
 import { Box } from "@mui/material";
 
+const URL =
+  process.env.API_BASE_URL || "http://localhost:3001";
+
 const UserImage = ({ image, size = "60px" }) => {
   return (
     <Box width={size} height={size}>
@@ -8,7 +11,7 @@ const UserImage = ({ image, size = "60px" }) => {
         width={size}
         height={size}
         alt="user"
-        src={`http://localhost:3001/assets/${image}`}
+        src={`${URL}/assets/${image}`}
       />
     </Box>
   );
