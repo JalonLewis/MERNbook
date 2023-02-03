@@ -25,7 +25,7 @@ const LoginPage = () => {
         backgroundColor={theme.palette.background.alt}
       >
         <Typography fontWeight="500" variant="h5" sx={{ mb: "1.5rem"}}>
-            Welcome to MERNbook, the most unique social media platform in existence which is totally not a basic facebook clone...
+            Welcome to MERNbook, the most unique social media platform in existence which is totally not a facebook clone...
         </Typography>
         <Form />
       </Box>
