@@ -16,8 +16,8 @@ import { setLogin } from "state";
 import Dropzone from "react-dropzone";
 import FlexBetween from "components/FlexBetween";
 
-const URL =
-  process.env.API_BASE_URL || "http://localhost:3001";
+const URL = "https://mernbook-server.onrender.com"
+  // process.env.API_BASE_URL || "http://localhost:3001";
 
 const registerSchema = yup.object().shape({
   firstName: yup.string().required("required"),

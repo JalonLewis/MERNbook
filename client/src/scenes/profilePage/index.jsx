@@ -8,8 +8,9 @@ import MyPostWidget from "scenes/widgets/MyPostWidget";
 import PostsWidget from "scenes/widgets/PostsWidget";
 import UserWidget from "scenes/widgets/UserWidget";
 
-const URL =
-  process.env.API_BASE_URL || "http://localhost:3001";
+// const URL =
+//   process.env.API_BASE_URL || "http://localhost:3001";
+const URL = "https://mernbook-server.onrender.com"
 
 const ProfilePage = () => {
   const [user, setUser] = useState(null);
