@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setFriends } from "state";
 
-const URL = process.env.API_BASE_URL || "http://localhost:3001";
+const URL = process.env.REACT_APP_API_BASE_URL || "http://localhost:3001";
 
 const FriendListWidget = ({ userId }) => {
   const dispatch = useDispatch();
