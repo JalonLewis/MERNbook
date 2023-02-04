@@ -12,8 +12,7 @@ import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const URL =
-  process.env.API_BASE_URL || "http://localhost:3001";
+const URL = process.env.API_BASE_URL || "http://localhost:3001";
 
 const UserWidget = ({ userId, picturePath }) => {
   const [user, setUser] = useState(null);
@@ -78,7 +77,6 @@ const UserWidget = ({ userId, picturePath }) => {
             <Typography color={medium}>{friends.length} friends</Typography>
           </Box>
         </FlexBetween>
-        <ManageAccountsOutlined />
       </FlexBetween>
 
       <Divider />
@@ -97,30 +95,8 @@ const UserWidget = ({ userId, picturePath }) => {
 
       <Divider />
 
-      {/* THIRD ROW */}
+      {/* THIRD ROW finish social integrations later */}
       <Box p="1rem 0">
-        <FlexBetween mb="0.5rem">
-          <Typography color={medium}>Who's viewed your profile</Typography>
-          <Typography color={main} fontWeight="500">
-            {viewedProfile}
-          </Typography>
-        </FlexBetween>
-        <FlexBetween>
-          <Typography color={medium}>Impressions of your post</Typography>
-          <Typography color={main} fontWeight="500">
-            {impressions}
-          </Typography>
-        </FlexBetween>
-      </Box>
-
-      <Divider />
-
-      {/* FOURTH ROW */}
-      <Box p="1rem 0">
-        <Typography fontSize="1rem" color={main} fontWeight="500" mb="1rem">
-          Social Profiles
-        </Typography>
-
         <FlexBetween gap="1rem" mb="0.5rem">
           <FlexBetween gap="1rem">
             <img src="../assets/twitter.png" alt="twitter" />
@@ -128,7 +104,6 @@ const UserWidget = ({ userId, picturePath }) => {
               <Typography color={main} fontWeight="500">
                 Twitter
               </Typography>
-              <Typography color={medium}>Social Network</Typography>
             </Box>
           </FlexBetween>
           <EditOutlined sx={{ color: main }} />
@@ -141,7 +116,6 @@ const UserWidget = ({ userId, picturePath }) => {
               <Typography color={main} fontWeight="500">
                 Linkedin
               </Typography>
-              <Typography color={medium}>Network Platform</Typography>
             </Box>
           </FlexBetween>
           <EditOutlined sx={{ color: main }} />

@@ -99,6 +99,7 @@ import {
                   >
                     <input {...getInputProps()} />
                     {!image ? (
+                      //Update later
                       <p>Add Image Here</p>
                     ) : (
                       <FlexBetween>
@@ -134,31 +135,8 @@ import {
             </Typography>
           </FlexBetween>
   
-          {isNonMobileScreens ? (
-            <>
-              <FlexBetween gap="0.25rem">
-                <GifBoxOutlined sx={{ color: mediumMain }} />
-                <Typography color={mediumMain}>Clip</Typography>
-              </FlexBetween>
-  
-              <FlexBetween gap="0.25rem">
-                <AttachFileOutlined sx={{ color: mediumMain }} />
-                <Typography color={mediumMain}>Attachment</Typography>
-              </FlexBetween>
-  
-              <FlexBetween gap="0.25rem">
-                <MicOutlined sx={{ color: mediumMain }} />
-                <Typography color={mediumMain}>Audio</Typography>
-              </FlexBetween>
-            </>
-          ) : (
-            <FlexBetween gap="0.25rem">
-              <MoreHorizOutlined sx={{ color: mediumMain }} />
-            </FlexBetween>
-          )}
-  
           <Button
-            disabled={!post}
+            disabled={!post }
             onClick={handlePost}
             sx={{
               color: palette.background.alt,

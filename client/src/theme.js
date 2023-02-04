@@ -27,6 +27,9 @@ export const colorTokens = {
     800: "#00353F",
     900: "#001519",
   },
+  red: {
+    500: "#e91e63",
+  },
 };
 
 // MUI THEME SETTINGS
@@ -53,6 +56,9 @@ export const themeSettings = (mode) => {
               default: colorTokens.grey[900],
               alt: colorTokens.grey[800],
             },
+            likeColor: {
+              main: colorTokens.red[500],
+            },
           }
         : {
             // PALETTE VALUES FOR LIGHT MODE
@@ -71,6 +77,9 @@ export const themeSettings = (mode) => {
             background: {
               default: colorTokens.grey[10],
               alt: colorTokens.grey[0],
+            },
+             likeColor: {
+              main: colorTokens.red[500],
             },
           }),
     },

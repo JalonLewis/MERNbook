@@ -36,6 +36,7 @@ import {
     const { palette } = useTheme();
     const main = palette.neutral.main;
     const primary = palette.primary.main;
+    const likeColor = palette.likeColor.main;
   
     const patchLike = async () => {
       const response = await fetch(`${URL}/posts/${postId}/like`, {
@@ -75,7 +76,7 @@ import {
             <FlexBetween gap="0.3rem">
               <IconButton onClick={patchLike}>
                 {isLiked ? (
-                  <FavoriteOutlined sx={{ color: primary }} />
+                  <FavoriteOutlined sx={{ color: likeColor }} />
                 ) : (
                   <FavoriteBorderOutlined />
                 )}
