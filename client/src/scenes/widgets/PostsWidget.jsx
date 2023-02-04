@@ -3,9 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setPosts } from "state";
 import PostWidget from "./PostWidget";
 
-// const URL =
-//   process.env.API_BASE_URL || "http://localhost:3001";
-const URL = "https://mernbook-server.onrender.com"
+const URL = process.env.API_BASE_URL || "http://localhost:3001";
 
 const PostsWidget = ({ userId, isProfile = false }) => {
   const dispatch = useDispatch();

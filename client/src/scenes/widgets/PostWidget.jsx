@@ -12,9 +12,7 @@ import {
   import { useDispatch, useSelector } from "react-redux";
   import { setPost } from "state";
 
-  // const URL =
-  // process.env.API_BASE_URL || "http://localhost:3001";
-  const URL = "https://mernbook-server.onrender.com"
+  const URL = process.env.API_BASE_URL || "http://localhost:3001";
   
   const PostWidget = ({
     postId,

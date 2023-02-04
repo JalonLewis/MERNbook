@@ -12,8 +12,7 @@ import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-// const URL = process.env.API_BASE_URL || "http://localhost:3001";
-const URL = "https://mernbook-server.onrender.com"
+const URL = process.env.API_BASE_URL || "http://localhost:3001";
 
 const UserWidget = ({ userId, picturePath }) => {
   const [user, setUser] = useState(null);

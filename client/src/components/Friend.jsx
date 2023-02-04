@@ -6,8 +6,8 @@ import { setFriends } from "state";
 import FlexBetween from "./FlexBetween";
 import UserImage from "./UserImage";
 
-const URL = "https://mernbook-server.onrender.com"
-  // process.env.API_BASE_URL || "http://localhost:3001";
+const URL = process.env.API_BASE_URL || "http://localhost:3001";
+  
 
 const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
   const dispatch = useDispatch();
