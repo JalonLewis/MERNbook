@@ -15,8 +15,12 @@ const PostsWidget = ({ userId, isProfile = false }) => {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });
-    const data = await response.json();
-    dispatch(setPosts({ posts: data }));
+    let data = await response.json();
+    let postsNewestToOldest = []
+    while (data.length > 0) {
+    postsNewestToOldest.push(data.pop())
+    }
+    dispatch(setPosts({ posts: postsNewestToOldest }));
   };
 
   const getUserPosts = async () => {
@@ -27,8 +31,12 @@ const PostsWidget = ({ userId, isProfile = false }) => {
         headers: { Authorization: `Bearer ${token}` },
       }
     );
-    const data = await response.json();
-    dispatch(setPosts({ posts: data }));
+    let data = await response.json();
+    let postsNewestToOldest = []
+    while (data.length > 0) {
+    postsNewestToOldest.push(data.pop())
+    }
+    dispatch(setPosts({ posts: postsNewestToOldest }));
   };
 
   useEffect(() => {

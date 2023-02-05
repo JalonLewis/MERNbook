@@ -45,8 +45,6 @@ const UserWidget = ({ userId, picturePath }) => {
     lastName,
     location,
     occupation,
-    viewedProfile,
-    impressions,
     friends,
   } = user;
 
@@ -95,7 +93,8 @@ const UserWidget = ({ userId, picturePath }) => {
 
       <Divider />
 
-      {/* THIRD ROW finish social integrations later */}
+      {/* THIRD ROW */} 
+      {/* // TODO finish social integrations later  */}
       <Box p="1rem 0">
         <FlexBetween gap="1rem" mb="0.5rem">
           <FlexBetween gap="1rem">
