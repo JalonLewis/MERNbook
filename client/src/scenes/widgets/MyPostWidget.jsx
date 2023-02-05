@@ -98,7 +98,7 @@ import {
                   >
                     <input {...getInputProps()} />
                     {!image ? (
-                      //Update later
+                      // TODO Update styling for image upload
                       <p>Add Image Here</p>
                     ) : (
                       <FlexBetween>
@@ -137,7 +137,8 @@ import {
           <Button
             disabled={!post }
             onClick={handlePost}
-            sx={{
+            sx={{ 
+              "&:hover": {  backgroundColor: "#00a0bc" },
               color: palette.background.alt,
               backgroundColor: palette.primary.main,
               borderRadius: "3rem",
