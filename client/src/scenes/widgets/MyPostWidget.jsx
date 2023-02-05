@@ -22,6 +22,7 @@ import Dropzone from "react-dropzone";
 import UserImage from "components/UserImage";
 import WidgetWrapper from "components/WidgetWrapper";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setPosts } from "state";
 
@@ -29,6 +30,7 @@ const URL = process.env.REACT_APP_API_BASE_URL || "http://localhost:3001";
 
 const MyPostWidget = ({ picturePath }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [isImage, setIsImage] = useState(false);
   const [image, setImage] = useState(null);
   const [post, setPost] = useState("");
@@ -53,14 +55,9 @@ const MyPostWidget = ({ picturePath }) => {
       headers: { Authorization: `Bearer ${token}` },
       body: formData,
     });
-    let posts = await response.json();
-    let postsNewestToOldest = [];
-    while (posts.length > 0) {
-      postsNewestToOldest.push(posts.pop());
-    }
-    dispatch(setPosts({ postsNewestToOldest }));
     setImage(null);
     setPost("");
+    navigate(0);
   };
 
   return (
