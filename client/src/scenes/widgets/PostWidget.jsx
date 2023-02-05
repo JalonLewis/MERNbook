@@ -34,7 +34,6 @@ import {
   
     const { palette } = useTheme();
     const main = palette.neutral.main;
-    const primary = palette.primary.main;
     const likeColor = palette.likeColor.main;
   
     const patchLike = async () => {
@@ -92,7 +91,7 @@ import {
           </FlexBetween>
   
           <IconButton>
-            <ShareOutlined />
+          <a href={`https://mernbook-server.onrender.com/assets/${picturePath}`} target="_blank" rel="noreferrer"><ShareOutlined sx={{ color: main }} /></a>
           </IconButton>
         </FlexBetween>
         {isComments && (
